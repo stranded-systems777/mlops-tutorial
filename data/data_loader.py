@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 from typing import Tuple
 import logging
-
+import numpy as np
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
