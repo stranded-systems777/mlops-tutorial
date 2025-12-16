@@ -29,7 +29,7 @@ jobs:
       
       - name: Run tests
         run: |
-          pytest test/ -v --cov=src --cov-report=xml
+          pytest tests/ -v --cov=src --cov-report=xml
       
       - name: Train model
         run: |
