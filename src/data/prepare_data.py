@@ -17,7 +17,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def main():  
+def main():
     """main data preparation pipeline"""
 
     # initialize components
@@ -67,3 +67,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
