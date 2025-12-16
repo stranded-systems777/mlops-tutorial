@@ -33,3 +33,4 @@ mlruns/
 # Docker images 
 *.tar 
 mlops-api-image.tar 
+bfg-*.jar 
