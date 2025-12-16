@@ -3,18 +3,22 @@ from pathlib import Path
 import logging
 from sklearn.model_selection import train_test_split
 
+# Add path manipulation here (after standard library imports)
 sys.path.append(str(Path(__file__).parent.parent.parent))
 
+# Local imports come after path manipulation
 from src.data.data_loader import DataLoader
 from src.data.data_validation import DataValidator
 
+# Logging config
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-def main():
+
+def main():  
     """main data preparation pipeline"""
 
     # initialize components
