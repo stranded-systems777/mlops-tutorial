@@ -3,8 +3,8 @@ from pathlib import Path
 import logging
 from sklearn.model_selection import train_test_split
 
-from src.data.data_loader import DataLoader
-from src.data.data_validation import DataValidator
+from data.data_loader import DataLoader
+from data.data_validation import DataValidator
 
 # Add path manipulation after all imports
 sys.path.append(str(Path(__file__).parent.parent.parent))
