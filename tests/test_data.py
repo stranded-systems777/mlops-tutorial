@@ -4,8 +4,8 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 
 import pytest
 import pandas as pd
-from data.data_loader import DataLoader
-from data.data_validator import DataValidator
+from src.data.data_loader import DataLoader
+from src.data.data_validation import DataValidator
 
 def test_data_loader():
     """testing data loading functionality"""

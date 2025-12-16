@@ -8,13 +8,13 @@ import numpy as np
 
 def test_model_exists():
     """test if model is in directory"""
-    assert Path("models\model.pkl").exists()
-    assert Path("models\scaler.pkl").exists()
+    assert Path("models/model.pkl").exists()
+    assert Path("models/scaler.pkl").exists()
 
 def test_model_prediction():
     """test model can make predictions"""
-    model = joblib.load('models\model.pkl')
-    scaler = joblib.load('models\scaler.pkl')
+    model = joblib.load('models/model.pkl')
+    scaler = joblib.load('models/scaler.pkl')
 
     # create sample input
     sample_input = np.array([[1500,2,3,10,7.5]])
