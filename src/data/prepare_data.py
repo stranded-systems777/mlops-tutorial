@@ -1,20 +1,18 @@
 import sys
 from pathlib import Path
-
+import logging
+from sklearn.model_selection import train_test_split
 
 sys.path.append(str(Path(__file__).parent.parent.parent))
 
 from src.data.data_loader import DataLoader
 from src.data.data_validation import DataValidator
-from sklearn.model_selection import train_test_split
-import logging
 
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s-%(name)s-%(levelname)s-%(message)s"
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-
 logger = logging.getLogger(__name__)
-
 
 def main():
     """main data preparation pipeline"""
@@ -44,7 +42,7 @@ def main():
     # validate data quality
     logger.info("Step 3: Validating data quality...")
     quality_results = validator.validate_data_quality(df)
-
+    logger.info(f"Quality checks: {quality_results}")
     # save data
     logger.info("step 5: Splitting data...")
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=12)
