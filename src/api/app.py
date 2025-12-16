@@ -119,7 +119,9 @@ async def predict_batch(features_list: List[HouseFeatures]):
         )
         input_scaled = scaler.transform(input_data)
         prediction = model.predict(input_scaled)[0]
-        predictions.append({"input": features.dict(), "predicted_price": float(prediction)})
+        predictions.append(
+            {"input": features.dict(), "predicted_price": float(prediction)}
+        )
     return {"predictions": predictions}
 
 
