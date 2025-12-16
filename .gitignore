@@ -29,4 +29,7 @@ mlruns/
 # Environment
 .env
 # Docker
-*.log
+*.log 
+# Docker images 
+*.tar 
+mlops-api-image.tar 
