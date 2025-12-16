@@ -3,12 +3,11 @@ from pathlib import Path
 import logging
 from sklearn.model_selection import train_test_split
 
-# Add path manipulation here (after standard library imports)
-sys.path.append(str(Path(__file__).parent.parent.parent))
-
-# Local imports come after path manipulation
 from src.data.data_loader import DataLoader
 from src.data.data_validation import DataValidator
+
+# Add path manipulation after all imports
+sys.path.append(str(Path(__file__).parent.parent.parent))
 
 # Logging config
 logging.basicConfig(
