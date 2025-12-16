@@ -4,8 +4,8 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent.parent))
 
-from data_loader import DataLoader
-from data_validation import DataValidator
+from src.data.data_loader import DataLoader
+from src.data.data_validation import DataValidator
 from sklearn.model_selection import train_test_split
 import logging
 
