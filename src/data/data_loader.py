@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 class DataLoader:
     """ Handles data loading and basic preprocessing """ 
 
-    def __init__(self, data_path:"data/raw"):
+    def __init__(self, data_path:str="data/raw"):
         self.data_path=Path(data_path)
     
     def load_sample_data(self)-> pd.DataFrame:
