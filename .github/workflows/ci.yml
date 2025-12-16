@@ -30,7 +30,7 @@ jobs:
       
       - name: Run tests
         run: |
-          PYTHONPATH=. pytest tests/ -v --cov=src --cov-report=xml
+          PYTHONPATH=${{ github.workspace }} pytest tests/ -v --cov=src --cov-report=xml
       
       - name: Train model
         run: |
