@@ -14,7 +14,7 @@ def test_data_loader():
 
     assert len(df) >0
     assert 'price' in df.columns
-    assert df.isnull().sum() == 0
+    assert df.isnull().sum().sum() == 0
 
 def test_data_validator():
     """test data validator"""
